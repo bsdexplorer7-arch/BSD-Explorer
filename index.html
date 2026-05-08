@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSD Explorer | Open Trip Portfolio</title>
+    <meta
+      name="description"
+      content="BSD Explorer - Open trip seru, aman, dan estetik dengan pengalaman destinasi terbaik."
+    />
+    <meta property="og:title" content="BSD Explorer | Open Trip Portfolio" />
+    <meta
+      property="og:description"
+      content="Jelajahi open trip gunung dan destinasi alam terbaik bareng BSD Explorer."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/gede.jpg" />
+    <meta name="theme-color" content="#070b14" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": "BSD Explorer Open Trip",
+        "description": "Open trip pegunungan dengan itinerary jelas, guide profesional, dan dokumentasi estetik.",
+        "provider": {
+          "@type": "Organization",
+          "name": "BSD Explorer"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="bg-glow bg-glow--one"></div>
+    <div class="bg-glow bg-glow--two"></div>
+
+    <header class="container nav">
+      <a href="#" class="brand">BSD Explorer</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu">Menu</button>
+      <nav id="navLinks">
+        <a href="#about">Tentang</a>
+        <a href="#trips">Trip</a>
+        <a href="#facilities">Fasilitas</a>
+        <a href="#schedule">Jadwal</a>
+        <a href="#booking">Booking</a>
+        <a href="#testimonials">Testimoni</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero__content">
+          <p class="tag">Open Trip Premium</p>
+          <h1>Eksplorasi Destinasi Keren Bareng BSD Explorer</h1>
+          <p class="subtitle">
+            Open trip dengan konsep modern, aman, dan itinerary jelas. Cocok untuk solo traveler
+            atau grup yang mau healing tanpa ribet planning.
+          </p>
+          <div class="cta">
+            <a href="#trips" class="btn btn--primary">Lihat Paket Trip</a>
+            <a href="#contact" class="btn btn--ghost">Booking Sekarang</a>
+          </div>
+        </div>
+
+        <div class="hero__card card-3d">
+          <h3>Booking Sekarang</h3>
+          <p>Slot Terbatas untuk Juni 2026</p>
+          <ul>
+            <li>14 Destinasi Tersedia</li>
+            <li>Camp & One Day Trip</li>
+            <li>Mulai dari Rp149K</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container section" id="about">
+        <h2>Kenapa BSD Explorer?</h2>
+        <div class="grid-3">
+          <article class="glass">
+            <h3>Rute Aman</h3>
+            <p>Itinerary jelas, tim berpengalaman, dan support peserta dari awal sampai pulang.</p>
+          </article>
+          <article class="glass">
+            <h3>Visual Estetik</h3>
+            <p>Spot foto pilihan dan dokumentasi trip yang siap buat feed social media lo.</p>
+          </article>
+          <article class="glass">
+            <h3>Komunitas Asik</h3>
+            <p>Ketemu temen baru, networking, dan pengalaman seru tanpa ribet planning sendiri.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section" id="trips">
+        <h2>Paket Open Trip</h2>
+        <div class="trip-filters">
+          <select id="budgetFilter" aria-label="Filter budget trip">
+            <option value="all">Semua Budget</option>
+            <option value="low">Di bawah 500K</option>
+            <option value="medium">500K - 800K</option>
+            <option value="high">Di atas 800K</option>
+          </select>
+          <select id="durationFilter" aria-label="Filter durasi trip">
+            <option value="all">Semua Durasi</option>
+            <option value="1d">1 Hari</option>
+            <option value="2d">2 Hari 1 Malam</option>
+            <option value="3d">3 Hari 2 Malam</option>
+          </select>
+          <select id="levelFilter" aria-label="Filter level trip">
+            <option value="all">Semua Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+        <div class="grid-3" id="tripGrid"></div>
+        <p class="trip-empty" id="tripEmpty" hidden>Belum ada trip yang cocok dengan filter ini.</p>
+      </section>
+
+      <section class="container section" id="facilities">
+        <h2>Fasilitas & Include Trip</h2>
+        <p class="section-subtitle">Apa saja yang lo dapatkan saat ikut open trip BSD Explorer</p>
+        <div class="facilities-grid">
+          <div class="facility-card glass">
+            <span class="facility-icon">🚐</span>
+            <h3>Transportasi PP</h3>
+            <p>AC, nyaman, dan tepat waktu dari meeting point Jakarta/Bogor/Depok/Tangerang/Bekasi.</p>
+          </div>
+          <div class="facility-card glass">
+            <span class="facility-icon">📸</span>
+            <h3>Dokumentasi Estetik</h3>
+            <p>Foto profesional dan video drone untuk konten social media lo.</p>
+          </div>
+          <div class="facility-card glass">
+            <span class="facility-icon">🍜</span>
+            <h3>Konsumsi</h3>
+            <p>Makan selama trip (termasuk makan basecamp untuk camping).</p>
+          </div>
+          <div class="facility-card glass">
+            <span class="facility-icon">🎫</span>
+            <h3>Tiket Masuk & Simaksi</h3>
+            <p>Semua tiket masuk dan perizinan gunung sudah diurus.</p>
+          </div>
+          <div class="facility-card glass">
+            <span class="facility-icon">⛺</span>
+            <h3>Peralatan Camping</h3>
+            <p>Tenda, matras, dan peralatan masak untuk trip camping (termasuk porter).</p>
+          </div>
+          <div class="facility-card glass">
+            <span class="facility-icon">👨‍🏫</span>
+            <h3>Guide Profesional</h3>
+            <p>Guide berpengalaman yang memastikan keamanan dan kenyamanan peserta.</p>
+          </div>
+          <div class="facility-card glass">
+            <span class="facility-icon">🏥</span>
+            <h3>P3K & Keamanan</h3>
+            <p>Peralatan P3K lengkap dan prosedur keamanan standar.</p>
+          </div>
+          <div class="facility-card glass">
+            <span class="facility-icon">📋</span>
+            <h3>Itinerary Jelas</h3>
+            <p>Jadwal perjalanan detail yang dikirim H-1 sebelum keberangkatan.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="faq">
+        <h2>FAQ (Pertanyaan Umum)</h2>
+        <p class="section-subtitle">Jawaban untuk pertanyaan yang sering ditanyakan</p>
+        <div class="faq-list">
+          <div class="faq-item glass">
+            <h3 class="faq-question">Bagaimana cara booking trip?</h3>
+            <p class="faq-answer">Pilih trip di section Paket Open Trip atau Jadwal, isi form Booking Cepat, atau langsung chat WhatsApp kami. DP 50% untuk booking, pelunasan H-3 keberangkatan.</p>
+          </div>
+          <div class="faq-item glass">
+            <h3 class="faq-question">Apa saja yang perlu dibawa?</h3>
+            <p class="faq-answer">Bawa pakaian hangat, jaket gunung, sepatu hiking, tas carrier (untuk camping), sunblock, obat pribadi, dan powerbank. Detail packing list akan dikirim setelah booking.</p>
+          </div>
+          <div class="faq-item glass">
+            <h3 class="faq-question">Bagaimana jika trip dibatalkan?</h3>
+            <p class="faq-answer">Jika pembatalan dari peserta: DP hangus. Jika pembatalan dari kami karena cuaca buruk atau force majeure, full refund atau reschedule tanpa biaya tambahan.</p>
+          </div>
+          <div class="faq-item glass">
+            <h3 class="faq-question">Apakah cocok untuk pemula?</h3>
+            <p class="faq-answer">Ya! Trip dengan level "Beginner" cocok untuk pemula. Guide kami akan membantu dan memastikan semua peserta bisa menikmati perjalanan dengan aman.</p>
+          </div>
+          <div class="faq-item glass">
+            <h3 class="faq-question">Dimana meeting point keberangkatan?</h3>
+            <p class="faq-answer">Meeting point biasanya di Jakarta (tergantung trip). Detail lokasi dan waktu meeting point akan dikirim H-1 melalui WhatsApp.</p>
+          </div>
+          <div class="faq-item glass">
+            <h3 class="faq-question">Apakah makanan halal?</h3>
+            <p class="faq-answer">Ya, semua konsumsi yang kami sediakan adalah makanan halal.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="schedule">
+        <h2>Jadwal Trip Bulan Juni 2026</h2>
+        <p class="section-subtitle">Pilih tanggal dan destinasi yang sesuai dengan jadwal lo</p>
+        
+        <div class="schedule-category">
+          <h3 class="schedule-category-title">Jadwal Camp (Camping)</h3>
+          <div class="schedule-grid">
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Ciremai</span>
+              <span class="schedule-date">26-28 Juni</span>
+              <span class="schedule-detail">SC 300K</span>
+              <span class="schedule-price">Rp685K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Pangrango</span>
+              <span class="schedule-date">19-21 Juni</span>
+              <span class="schedule-detail">SC 250K</span>
+              <span class="schedule-price">Rp700K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Gede</span>
+              <span class="schedule-date">19-21 Juni</span>
+              <span class="schedule-detail">SC 250K</span>
+              <span class="schedule-price">Rp600K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Merbabu</span>
+              <span class="schedule-date">19-21 Juni</span>
+              <span class="schedule-detail">SC 250K</span>
+              <span class="schedule-price">Rp850K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Lawu</span>
+              <span class="schedule-date">26-28 Juni</span>
+              <span class="schedule-detail">SC 250K</span>
+              <span class="schedule-price">Rp850K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Prau</span>
+              <span class="schedule-date">12-14 Juni</span>
+              <span class="schedule-detail">SC 250K</span>
+              <span class="schedule-price">Rp685K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Slamet</span>
+              <span class="schedule-date">26-28 Juni</span>
+              <span class="schedule-detail">SC 250K</span>
+              <span class="schedule-price">Rp685K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Sindoro</span>
+              <span class="schedule-date">12-14 Juni</span>
+              <span class="schedule-detail">SC 250K</span>
+              <span class="schedule-price">Rp700K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Sumbing</span>
+              <span class="schedule-date">12-14 Juni</span>
+              <span class="schedule-detail">SC 250K</span>
+              <span class="schedule-price">Rp750K</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-category">
+          <h3 class="schedule-category-title">Jadwal Tektok (One Day Trip)</h3>
+          <div class="schedule-grid">
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Ciremai</span>
+              <span class="schedule-date">13-14 & 20-21 Juni</span>
+              <span class="schedule-detail">249K</span>
+              <span class="schedule-price">Rp479K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Pangrango</span>
+              <span class="schedule-date">13-14 & 20-21 Juni</span>
+              <span class="schedule-detail">249K</span>
+              <span class="schedule-price">Rp379K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Gede</span>
+              <span class="schedule-date">13-14 & 20-21 Juni</span>
+              <span class="schedule-detail">199K</span>
+              <span class="schedule-price">Rp349K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Cikuray</span>
+              <span class="schedule-date">13-14 & 20-21 Juni</span>
+              <span class="schedule-detail">249K</span>
+              <span class="schedule-price">Rp379K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Papandayan</span>
+              <span class="schedule-date">13-14 & 20-21 Juni</span>
+              <span class="schedule-detail">249K</span>
+              <span class="schedule-price">Rp349K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Salak 1/2</span>
+              <span class="schedule-date">13-14 & 20-21 Juni</span>
+              <span class="schedule-detail">249K</span>
+              <span class="schedule-price">Rp379K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Luhur</span>
+              <span class="schedule-date">13-14 & 20-21 Juni</span>
+              <span class="schedule-detail">149K</span>
+              <span class="schedule-price">Rp300K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Sinsin Prau</span>
+              <span class="schedule-date">20-21 & 27-28 Juni</span>
+              <span class="schedule-detail">199K</span>
+              <span class="schedule-price">Rp480K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Merbabu</span>
+              <span class="schedule-date">20-21 & 27-28 Juni</span>
+              <span class="schedule-detail">149K</span>
+              <span class="schedule-price">Rp499K</span>
+            </div>
+            <div class="schedule-card glass">
+              <span class="schedule-destination">Gn. Lawu</span>
+              <span class="schedule-date">20-21 & 27-28 Juni</span>
+              <span class="schedule-detail">199K</span>
+              <span class="schedule-price">Rp519K</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="booking">
+        <h2>Booking Cepat</h2>
+        <form class="booking-form glass" id="bookingForm">
+          <label>
+            Nama
+            <input type="text" id="nameInput" required placeholder="Nama lengkap" />
+          </label>
+          <label>
+            Pilih Trip
+            <select id="tripInput" required></select>
+          </label>
+          <label>
+            Tanggal Berangkat
+            <input type="date" id="dateInput" required />
+          </label>
+          <label>
+            Jumlah Peserta
+            <input type="number" id="paxInput" min="1" max="20" value="1" required />
+          </label>
+          <button type="submit" class="btn btn--primary">Kirim Booking ke WhatsApp</button>
+        </form>
+      </section>
+
+      <section class="container section" id="testimonials">
+        <h2>Testimoni Peserta</h2>
+        <div class="testimonial glass">
+          <p id="testimonialText">
+            "Tripnya tertata, guide ramah, dan dokumentasi bagus banget. Pasti ikut lagi!"
+          </p>
+          <strong id="testimonialName">- Rani, Jakarta</strong>
+          <div class="testimonial-controls">
+            <button id="prevTesti" class="btn btn--ghost" type="button">Prev</button>
+            <button id="nextTesti" class="btn btn--ghost" type="button">Next</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer" id="contact">
+      <h2>Siap Ikut Trip Berikutnya?</h2>
+      <p>DM Instagram @bsd.explorer atau WhatsApp: 0857-1557-7098</p>
+      <div class="contact-actions">
+        <a
+          class="btn btn--primary"
+          href="https://wa.me/6285715577098?text=Halo%20BSD%20Explorer%2C%20aku%20mau%20tanya%20open%20trip%20terdekat."
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat WhatsApp BSD Explorer"
+          >Chat WhatsApp</a
+        >
+        <a
+          class="btn btn--ghost"
+          href="https://instagram.com/bsd.explorer"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Buka Instagram BSD Explorer"
+          >Lihat Instagram</a
+        >
+      </div>
+      <small>© 2026 BSD Explorer. All rights reserved.</small>
+    </footer>
+
+    <a
+      class="wa-float"
+      href="https://wa.me/6285715577098?text=Halo%20BSD%20Explorer%2C%20aku%20mau%20info%20open%20trip."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat WhatsApp BSD Explorer"
+      ><span class="wa-float__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" role="img">
+          <path
+            d="M20.52 3.48A11.8 11.8 0 0 0 12.12 0C5.44 0 .02 5.42.02 12.1c0 2.13.56 4.2 1.63 6.02L0 24l6.1-1.6a12.05 12.05 0 0 0 6.01 1.62h.01c6.67 0 12.1-5.43 12.1-12.1 0-3.23-1.26-6.27-3.7-8.44zM12.12 21.96h-.01a9.9 9.9 0 0 1-5.04-1.39l-.36-.21-3.62.95.97-3.53-.24-.36a9.9 9.9 0 0 1-1.53-5.3c0-5.48 4.46-9.94 9.94-9.94 2.66 0 5.16 1.04 7.03 2.9a9.88 9.88 0 0 1 2.9 7.03c0 5.49-4.46 9.95-9.94 9.95zm5.45-7.43c-.3-.15-1.77-.88-2.05-.98-.27-.1-.46-.15-.65.15-.2.3-.75.98-.92 1.18-.17.2-.34.23-.63.08-.3-.15-1.24-.45-2.36-1.45a8.73 8.73 0 0 1-1.64-2.04c-.17-.3-.02-.46.13-.6.14-.14.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.65-1.57-.9-2.15-.23-.56-.47-.48-.65-.49h-.55c-.2 0-.5.08-.76.38-.26.3-1 1-.99 2.43 0 1.42 1.02 2.79 1.17 2.98.15.2 2.02 3.08 4.9 4.31.69.3 1.23.48 1.66.62.7.22 1.33.2 1.83.12.56-.08 1.77-.72 2.02-1.41.25-.7.25-1.3.18-1.42-.08-.12-.27-.2-.57-.35z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+      <span class="wa-float__text">Chat WhatsApp</span></a
+    >
+
+    <script src="trips-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
